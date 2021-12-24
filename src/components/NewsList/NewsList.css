@@ -1,0 +1,6 @@
+@media screen and (max-width: 1500px) {
+    .news-list {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }

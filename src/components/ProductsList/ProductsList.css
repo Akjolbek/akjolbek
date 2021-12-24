@@ -1,0 +1,12 @@
+.products-search {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.inp-btn2{
+    width: 300px;
+    border: 1px transparent  black;
+    margin-bottom: 50px;   
+    margin-left: 40%;
+}

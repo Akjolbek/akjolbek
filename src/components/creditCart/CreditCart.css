@@ -1,0 +1,41 @@
+#PaymentForm{ 
+    display:flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 50px; 
+    display: grid;     
+}
+
+#PaymentInput{ 
+    display: flex; 
+    border-style: groove; 
+    margin-top: 20px; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.inputCard{ 
+    flex-direction: column; 
+    display: flex; 
+    /* justify-content: center; */ 
+    align-items: center; 
+    margin-top: 15px;    
+} 
+ 
+.button{ 
+    transition: 1s;
+    background-color: #001489;
+    border: none;
+    color: white;
+    height: 70px;
+    width: 170px;
+    border-radius:20px;
+    font-size: 18px;
+}
+
+input{
+ width: 300px;
+ height: 40px;
+ border-radius: 7px;
+ text-align: center;
+}

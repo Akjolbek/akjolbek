@@ -1,0 +1,102 @@
+{
+  "products": [
+    {
+      "brand": "Антрацид",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/antracit.jpg",
+      "id": 1
+    },
+    {
+      "brand": "Мореный дуб",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/mor-dub.jpg",
+      "id": 2
+    },
+    {
+      "brand": "Платинум",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/platinum.jpg",
+      "id": 3
+    },
+    {
+      "brand": "Орех",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/z-oreh.jpg",
+      "id": 4
+    },
+    {
+      "brand": "Монолит",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/nat_dub.jpg",
+      "id": 5
+    },
+    {
+      "brand": "Махагон",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/mahagon.jpg",
+      "id": 6
+    },
+    {
+      "brand": "Золотой дуб",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/shogun.jpg",
+      "id": 7
+    },
+    {
+      "brand": "Рустик",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/rustik.jpg",
+      "id": 8
+    },
+    {
+      "brand": "Стандарт",
+      "price": 50,
+      "image1": "https://euragroup.kg/wp-content/uploads/2019/01/small_01.jpg",
+      "id": 9
+    }
+  ],
+  "news": [
+    {
+      "title": "Профиль - Германия. Цвет \"Золотой дуб\"",
+      "image1": "http://grandplast.kg/assets/img/portfolio/1.jpg",
+      "id": 1
+    },
+    {
+      "title": "Профиль - Алюминий. Декорация - gold",
+      "image1": "http://grandplast.kg/assets/img/portfolio/2.png",
+      "id": 2
+    },
+    {
+      "title": "Профиль - Германия. Остекление \"Зеркальное\"",
+      "image1": "http://grandplast.kg/assets/img/portfolio/3.jpg",
+      "id": 3
+    },
+    {
+      "title": "Профиль - Германия. Цвет \"Мореный дуб\"",
+      "image1": "http://grandplast.kg/assets/img/portfolio/4.jpg",
+      "id": 4
+    },
+    {
+      "title": "Профиль - Турция. Цвет \"Махагон\" с декором",
+      "image1": "http://grandplast.kg/assets/img/portfolio/5.jpg",
+      "id": 5
+    },
+    {
+      "title": "Профиль - Германия. Конусные витражи",
+      "image1": "http://grandplast.kg/assets/img/portfolio/6.jpg",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "newComment": {
+        "word": "hhjjjj",
+        "createdAtMs": 1640356655948,
+        "tanksId": 2,
+        "email": "akjol2001@gmail.com"
+      },
+      "tankId": 2,
+      "id": 1
+    }
+  ]
+}

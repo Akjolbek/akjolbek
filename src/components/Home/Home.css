@@ -1,0 +1,159 @@
+body {
+    background-image: url(http://eliteplast.kg/images/heading-bg.jpg);
+}
+
+.back-img {
+  background-image: url(http://grandplast.kg/assets/static/pages/site/okna/img/bg-top.jpg);
+}
+
+.count h2 {
+  color: white;
+}
+
+.orange {
+  color: #ff2c48
+}
+
+.top__block-banner-title {
+  font-size: 21px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.link {
+    margin-top: 5%;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.cards {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.card2 {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.card3 {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cards img {
+    width: 315px;
+}
+
+.auto h1 {
+  color: white;
+}
+
+.row {
+    margin-left:-5px;
+    margin-right:-5px;
+  }
+    
+  .column {
+    width: 100%;
+    float: left;
+    padding: 5px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  @media screen and (max-width: 1200px) {
+
+    .cards{
+      flex-wrap: wrap;
+    }
+
+    .card2{
+      flex-wrap: wrap;
+    }
+
+    .ant-card{
+      margin-top: 10px;
+    }
+  
+    .news{
+      display: grid!important;
+      grid-column-gap: 25px;
+    }
+
+    .row{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  }
+
+  @media screen and (max-width: 400px) {
+    .row{
+      width: 100%!important;
+    }
+    .tr{
+      width: 385px!important;
+    }
+    h2{
+      text-align: center;
+      width: 50%;
+      margin: auto;
+    }
+    h3{
+      margin: auto;
+      width: 50%;
+      text-align: center;
+    }
+    .ant-card-meta-title{
+      display: block;
+      white-space:normal!important;
+    }
+    table{
+      width: auto!important;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .top__block-banner {
+      display: flex;
+      justify-content: center;
+    }
+  }
