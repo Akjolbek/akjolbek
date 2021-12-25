@@ -49,22 +49,52 @@
       "id": 8
     },
     {
-      "brand": "Стандарт",
-      "price": 50,
-      "image1": "https://euragroup.kg/wp-content/uploads/2019/01/small_01.jpg",
+      "brand": "Антрацид",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/antracit.jpg",
       "id": 9
     },
     {
-      "brand": "tttt",
-      "price": 555,
-      "image1": "ttttt",
+      "brand": "Мореный дуб",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/mor-dub.jpg",
       "id": 10
     },
     {
-      "brand": "iiii",
-      "price": 999,
-      "image1": "uuu",
+      "brand": "Платинум",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/platinum.jpg",
       "id": 11
+    },
+    {
+      "brand": "Орех",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/z-oreh.jpg",
+      "id": 12
+    },
+    {
+      "brand": "Монолит",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/nat_dub.jpg",
+      "id": 13
+    },
+    {
+      "brand": "Махагон",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/mahagon.jpg",
+      "id": 14
+    },
+    {
+      "brand": "Золотой дуб",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/shogun.jpg",
+      "id": 15
+    },
+    {
+      "brand": "Рустик",
+      "price": 75,
+      "image1": "http://grandplast.kg/images/colors/rustik.jpg",
+      "id": 16
     }
   ],
   "news": [
@@ -103,22 +133,31 @@
     {
       "newComment": {
         "word": "akjolll",
-        "createdAtMs": 1640426740382,
-        "tanksId": 2,
-        "email": "akjol2001@gmail.com"
-      },
-      "tankId": 2,
-      "id": 1
-    },
-    {
-      "newComment": {
-        "word": "akjolll",
         "createdAtMs": 1640441331009,
         "tanksId": 9,
         "email": "akjol2001@gmail.com"
       },
       "tankId": 9,
       "id": 2
+    },
+    {
+      "newComment": {
+        "word": "GJHGJHGJ",
+        "createdAtMs": 1640445811035,
+        "tanksId": 3
+      },
+      "tankId": 3,
+      "id": 3
+    },
+    {
+      "newComment": {
+        "word": "рлорлрл",
+        "createdAtMs": 1640452772266,
+        "tanksId": 2,
+        "email": "akjol2001@gmail.com"
+      },
+      "tankId": 2,
+      "id": 4
     }
   ],
   "doors": [
@@ -137,7 +176,7 @@
       "id": 3
     },
     {
-      "door": "Золотой дуб",
+      "door": "Золотой",
       "price": 33500,
       "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-groff-p2-202.png",
       "id": 4
@@ -207,6 +246,18 @@
       "price": 23100,
       "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-door-out-201-3-82-4.png",
       "id": 15
+    },
+    {
+      "door": "Темный орех",
+      "price": 75,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/dm-groff-p2-200-2.png",
+      "id": 16
+    },
+    {
+      "door": "Светлый орех",
+      "price": 75,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/dm-groff-p2-200-1.png",
+      "id": 17
     }
   ]
 }

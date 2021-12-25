@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
 import { Button, Form, Input, InputNumber } from "antd";
 import { productsContext } from "../../contexts/productsContext";
-import "./EditProduct.css"
 
 const EditProduct = () => {
   const params = useParams();

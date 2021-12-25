@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
 import { Button, Form, Input } from "antd";
-import "./EditNews.css"
 import { newsContext } from "../../contexts/newsContext";
 
 const EditNews = () => {

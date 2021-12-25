@@ -100,6 +100,11 @@ const Routing = () => {
       element:<DetailsDoor/>,
       id: 16
     },
+    {
+      link: "/window_home_3",
+      element: <WindowHome3 />,
+      id: 17,
+    },
   ];
   const ADMIN_ROUTES = [
     {
@@ -118,14 +123,9 @@ const Routing = () => {
       id: 3,
     },
     {
-      link: "/window_home_3",
-      element: <WindowHome3 />,
-      id: 4,
-    },
-    {
       link:"/edites/:id",
       element:<EditDoor />,
-      id: 5
+      id: 4
     },
   ];
   const { user } = useAuth();
