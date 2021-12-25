@@ -1,15 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-
 import {  Pagination, Empty } from "antd";
-
-import { productsContext } from "../../contexts/productsContext";
-
+import { doorsContext } from "../../contexts/doorsContext";
 import Filters from "../Filters/Filters";
-import "./ProductsList.css";
-import ProductCard from "./ProductCard";
+import DoorsCard from "./DoorsCard";
 
-const ProductsList = () => {
+const DoorsList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState(
     searchParams.get("q") ? searchParams.get("q") : ""
@@ -24,8 +20,8 @@ const ProductsList = () => {
   const [price, setPrice] = useState([1, 100000]);
   const [showFilters, setShowFilters] = useState(false);
 
-  const { getProducts, products, productsTotalCount } =
-    useContext(productsContext);
+  const { getDoors, doors, doorsTotalCount } =
+    useContext(doorsContext);
   useEffect(() => {
     setSearchParams({
       q: search,
@@ -37,8 +33,8 @@ const ProductsList = () => {
     });
   }, []);
   useEffect(() => {
-    getProducts();
-  }, []);
+    getDoors();
+  }, [searchParams]);
   useEffect(() => {
     setSearchParams({
       q: search,
@@ -48,8 +44,8 @@ const ProductsList = () => {
       price_gte: price[0],
       price_lte: price[1],
     });
-  }, []);
-  console.log(products);
+  }, [search, page, limit, brand, price]);
+  console.log(doors);
   return (
     <div className="shop">
       <div> 
@@ -61,7 +57,7 @@ const ProductsList = () => {
          onChange={(e) => setSearch(e.target.value)} >
          </input>
         </div>
-      <div className="products-search">
+      <div className="doors-search">
       <div
           style={{ cursor: "pointer", marginLeft: '2%', color: 'white'}}
           onClick={() => setShowFilters(!showFilters)}
@@ -78,12 +74,11 @@ const ProductsList = () => {
           setPrice={setPrice}
         />
       ) : null}
-      <div style={{display: "flex", width: "100%"}}>
-       <div style={{width: "20%"}}></div>
-        
-       <div className="products-list" style={{width: "80%", flexWrap: "wrap"}}>
-        {products.length > 0 ? (
-          products.map((item) => <ProductCard item={item} />)
+      <div style={{display: "flex", width: "100%", justifyContent: 'center', marginTop: '2%'}}>
+       {/* <div style={{width: "10%"}}></div> */}
+       <div className="doors-list" style={{width: "80%", flexWrap: "wrap", display: 'flex', justifyContent: 'center'}}>
+        {doors.length > 0 ? (
+          doors.map((item) => <DoorsCard item={item} />)
         ) : (
           <Empty style={{ marginBottom: "20px", marginLeft: '-25%' }} />
         )}
@@ -94,15 +89,16 @@ const ProductsList = () => {
         <Pagination
           onChange={(page, limit) => {
             setPage(page);
-            setLimit(limit);}}
+            setLimit(limit);
+          }}
           current={+page}
           pageSize={+limit}
           defaultCurrent={1}
-          total={+productsTotalCount}
+          total={+doorsTotalCount}
         />
       </div>
     </div>
   );
 };
 
-export default ProductsList;
+export default DoorsList;

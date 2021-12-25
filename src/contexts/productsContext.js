@@ -44,7 +44,7 @@ const ProductsContextProvider = ({ children }) => {
   }
 
   async function getOneProduct(id) {
-    let result = await axios.get(`${PRODUCTS_API}/${id}?_embed=comments`);
+    let result = await axios.get(`${PRODUCTS_API}/${id}`);
     dispatch({
       type: CASE_GET_ONE_PRODUCT,
       payload: result,

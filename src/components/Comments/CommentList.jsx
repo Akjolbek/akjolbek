@@ -71,7 +71,8 @@ const CommentList = ({ id }) => {
             borderRadius: "5px",
             border: "2px solid white",
             color: "white",
-            marginLeft: '3%'
+            marginLeft: '3%',
+            cursor: 'pointer'
           }}
         >
           Добавить

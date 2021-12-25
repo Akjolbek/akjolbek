@@ -13,8 +13,8 @@ import "antd/dist/antd.css";
 import "./App.css";
 import NewsContextProvider from "./contexts/newsContext";
 import FavContextProvider from "./contexts/favContext";
-import LikeContextProvider from "./contexts/likeContext";
 import CommentContextProvider from "./contexts/commentsContext";
+import DoorsContextProvider from "./contexts/doorsContext";
 
 const App = () => {
   return (
@@ -22,8 +22,8 @@ const App = () => {
       <CartContextProvider>
         <CommentContextProvider>
         <FavContextProvider>
-          <LikeContextProvider>
           <ProductsContextProvider>
+            <DoorsContextProvider>
             <NewsContextProvider>
               <BrowserRouter>
                 <Header />
@@ -31,8 +31,8 @@ const App = () => {
                 <Footer />
               </BrowserRouter>
             </NewsContextProvider>
+            </DoorsContextProvider>
           </ProductsContextProvider>
-        </LikeContextProvider>
         </FavContextProvider>
         </CommentContextProvider>
       </CartContextProvider>

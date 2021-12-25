@@ -53,6 +53,18 @@
       "price": 50,
       "image1": "https://euragroup.kg/wp-content/uploads/2019/01/small_01.jpg",
       "id": 9
+    },
+    {
+      "brand": "tttt",
+      "price": 555,
+      "image1": "ttttt",
+      "id": 10
+    },
+    {
+      "brand": "iiii",
+      "price": 999,
+      "image1": "uuu",
+      "id": 11
     }
   ],
   "news": [
@@ -90,13 +102,111 @@
   "comments": [
     {
       "newComment": {
-        "word": "hhjjjj",
-        "createdAtMs": 1640356655948,
+        "word": "akjolll",
+        "createdAtMs": 1640426740382,
         "tanksId": 2,
         "email": "akjol2001@gmail.com"
       },
       "tankId": 2,
       "id": 1
+    },
+    {
+      "newComment": {
+        "word": "akjolll",
+        "createdAtMs": 1640441331009,
+        "tanksId": 9,
+        "email": "akjol2001@gmail.com"
+      },
+      "tankId": 9,
+      "id": 2
+    }
+  ],
+  "doors": [
+    {
+      "door": "Темный Орех",
+      "price": 33500,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/dm-groff-p2-200-2.png",
+      "id": 2,
+      "brand": "Темный Орех",
+      "image1": "33 500"
+    },
+    {
+      "door": "Светлый орех",
+      "price": 33500,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/dm-groff-p2-200-1.png",
+      "id": 3
+    },
+    {
+      "door": "Золотой дуб",
+      "price": 33500,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-groff-p2-202.png",
+      "id": 4
+    },
+    {
+      "door": "Беленый дуб",
+      "price": 31700,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-groff-p2-205.png",
+      "id": 5
+    },
+    {
+      "door": "Темная вишня",
+      "price": 34000,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-groff-p2-206-2.png",
+      "id": 6
+    },
+    {
+      "door": "Беленый дуб",
+      "price": 34000,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-groff-p2-206-1.png",
+      "id": 7
+    },
+    {
+      "door": "Темная вишня",
+      "price": 36500,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-groff-p2-301.png",
+      "id": 8
+    },
+    {
+      "door": "Серый дуб",
+      "price": 37000,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-groff-p2-303.png",
+      "id": 9
+    },
+    {
+      "door": "Эконом",
+      "price": 11100,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_build.png",
+      "id": 10
+    },
+    {
+      "door": "Термо",
+      "price": 43800,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_termo.png",
+      "id": 11
+    },
+    {
+      "door": "Термо",
+      "price": 43800,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_termo2.png",
+      "id": 12
+    },
+    {
+      "door": "Лайт",
+      "price": 12000,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-strojgost2.png",
+      "id": 13
+    },
+    {
+      "door": "Флэш",
+      "price": 23100,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-door-out-201-3-82-1.png",
+      "id": 14
+    },
+    {
+      "door": "Класс Cappucino",
+      "price": 23100,
+      "image": "http://www.doors.kg/components/com_jshopping/files/img_products/thumb_dm-door-out-201-3-82-4.png",
+      "id": 15
     }
   ]
 }

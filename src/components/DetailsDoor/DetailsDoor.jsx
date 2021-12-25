@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link, useSearchParams } from "react-router-dom";
 import { Button, Empty } from "antd";
-import { productsContext } from "../../contexts/productsContext";
+import { doorsContext } from "../../contexts/doorsContext";
 import CommentList from "../Comments/CommentList";
-import ProductCard from "../WindowsList/ProductCard";
+import DoorsCard from "../DoorsList/DoorsCard";
 
-const DetailsProduct = () => {
+const DetailsDoor = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search] = useState(
     searchParams.get("q") ? searchParams.get("q") : ""
@@ -19,7 +19,7 @@ const DetailsProduct = () => {
   );
   const [brand] = useState([]);
   const [price] = useState([1, 100000]);
-  const { getProducts, products } = useContext(productsContext);
+  const { getDoors, doors } = useContext(doorsContext);
   useEffect(() => {
     setSearchParams({
       q: search,
@@ -31,7 +31,7 @@ const DetailsProduct = () => {
     });
   }, []);
   useEffect(() => {
-    getProducts();
+    getDoors();
   }, []);
   useEffect(() => {
     setSearchParams({
@@ -43,19 +43,19 @@ const DetailsProduct = () => {
       price_lte: price[1],
     });
   }, []);
-  console.log(products);
+  console.log(doors);
   const { id } = useParams();
-  const { getOneProduct, oneProduct } = useContext(productsContext);
-  const [product, setProduct] = useState(null);
+  const { getOneDoor, oneDoor } = useContext(doorsContext);
+  const [door, setDoor] = useState(null);
   useEffect(() => {
-    getOneProduct(id);
+    getOneDoor(id);
   }, []);
   useEffect(() => {
-    setProduct(oneProduct);
-  }, [oneProduct])
+    setDoor(oneDoor);
+  }, [oneDoor])
   return (
     <div className="container" style={{ marginTop: "20px" }}>
-      {product ? (
+      {door ? (
         <>
           <div
             style={{
@@ -67,12 +67,12 @@ const DetailsProduct = () => {
           >
             <div style={{ width: "370px", height: '450px' }}>
                 <div>
-                  <img style={{width: "100%", height: '400px', borderRadius: '5%'}} src={product.image1} alt="" />
+                  <img style={{width: "100%", height: '400px', borderRadius: '5%'}} src={door.image} alt="" />
                 </div>
             </div>
             <div style={{ width: "40vw" }}>
-              <h2 style={{color: 'white', marginLeft: '-25%'}}>{product.brand}</h2>
-              <h2 style={{color: 'white', marginLeft: '-25%'}}>{`$ ${product.price}`}</h2>
+              <h2 style={{color: 'white', marginLeft: '-25%'}}>{door.brand}</h2>
+              <h2 style={{color: 'white', marginLeft: '-25%'}}>{`${door.price} сом`}</h2>
               <Link to="/creditForm">
               <Button
                 size="large"
@@ -83,13 +83,14 @@ const DetailsProduct = () => {
               </Link>
             </div>
           </div>
-          <CommentList id={product.id}/>
+          <CommentList id={door.id}/>
           <div style={{marginTop: '3%'}}>
           <h1 style={{display: 'flex', justifyContent: 'center', color: 'white'}}>Вам также может понравиться</h1>
         </div>
-       <div className="products-list" style={{width: "100%"}}>
-        {products.length > 0 ? (
-          products.map((item) => <ProductCard item={item} />)
+        
+       <div className="doors-list" style={{width: "100%", display: 'flex', flexWrap: 'wrap'}}>
+        {doors.length > 0 ? (
+          doors.map((item) => <DoorsCard item={item} />)
         ) : (
           <Empty style={{ marginBottom: "20px", marginLeft: '-25%' }} />
         )}
@@ -102,4 +103,4 @@ const DetailsProduct = () => {
   );
 };
 
-export default DetailsProduct;
+export default DetailsDoor;

@@ -8,7 +8,7 @@ const WindowHome = () => {
     return (
             <div>
             <h2 style={{display: 'flex', justifyContent: 'center', color: 'white'}}>Выберите окно</h2>
-            <div style={{display: 'flex', justifyContent: 'center'}}>
+            <div className='okno' style={{display: 'flex', justifyContent: 'center'}}>
             <Link to='/window_home_2'>
             <Card
               hoverable

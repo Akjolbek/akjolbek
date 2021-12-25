@@ -1,14 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Modal, Button, Form, Input } from "antd";
+import React, { useContext, useState } from "react";
+import { Modal, Button, Form, Input, InputNumber } from "antd";
+import { doorsContext } from "../../contexts/doorsContext";
 
-import { newsContext } from "../../contexts/newsContext";
-
-const AddNewsModal = () => {
-  const { createNews } = useContext(newsContext);
-  const { getNews } = useContext(newsContext);
-  useEffect(() => {
-    getNews();
-  }, []);
+const AddDoorModal = () => {
+  const { createDoor } = useContext(doorsContext);
 
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -21,15 +16,16 @@ const AddNewsModal = () => {
   };
 
   const onFinish = (values) => {
-    createNews(values).then(() => handleCancel());
+    console.log("Success:", values);
+    createDoor(values).then(() => handleCancel());
   };
   return (
     <>
-      <Button type="primary" onClick={showModal}>
-        Add work
+      <Button style={{marginLeft: '2%'}} type="primary" onClick={showModal}>
+        Add door
       </Button>
       <Modal
-        title="Add news"
+        title="Add door"
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
@@ -41,25 +37,38 @@ const AddNewsModal = () => {
           layout="vertical"
         >
           <Form.Item
-            label="News title"
-            name="title"
+            label="Door"
+            name="door"
             rules={[
               {
                 required: true,
-                message: "Please input news title!",
+                message: "Please input door!",
               },
             ]}
           >
-           <Input />
-           </Form.Item>
+            <Input />
+          </Form.Item>
 
-           <Form.Item
-            label="Image"
-            name="image1"
+          <Form.Item
+            label="Price"
+            name="price"
             rules={[
               {
                 required: true,
-                message: "Please input URL of image 1!",
+                message: "Please input price!",
+              },
+            ]}
+          >
+            <InputNumber min={1} style={{ width: "100%" }} />
+          </Form.Item>
+
+          <Form.Item
+            label="Image"
+            name="image"
+            rules={[
+              {
+                required: true,
+                message: "Please input URL of image!",
               },
             ]}
           >
@@ -73,7 +82,7 @@ const AddNewsModal = () => {
             }}
           >
             <Button type="primary" htmlType="submit">
-              Add work
+              Add door
             </Button>
           </Form.Item>
         </Form>
@@ -82,4 +91,4 @@ const AddNewsModal = () => {
   );
 };
 
-export default AddNewsModal;
+export default AddDoorModal;

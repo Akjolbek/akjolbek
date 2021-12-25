@@ -3,19 +3,23 @@ import { Link } from "react-router-dom";
 import { Card, Rate } from "antd";
 import {
   ShoppingCartOutlined,
-  EllipsisOutlined,
+  SendOutlined,
   StarOutlined,
-  HeartFilled
+  HeartOutlined
 } from "@ant-design/icons";
 
 import { cartContext } from "../../contexts/cartContext";
 import { useState } from "react";
 import { favContext } from "../../contexts/favContext";
-import { likeContext } from "../../contexts/likeContext";
 
 import './ProductCard.css'
 
+function getInitialState(){
+  return new Date().getDate()
+}
+
 const ProductCard = ({ item }) => {
+  const [counter, setCounter] = useState (() => getInitialState())
   const { addProductToCart, checkItemInCart } = useContext(cartContext);
   const [checkInCart, setCheckInCart] = useState(checkItemInCart(item.id));
   useEffect(() => {
@@ -28,11 +32,9 @@ const ProductCard = ({ item }) => {
     setCheckInFav(checkItemInFav(item.id))
   })
 
-  const {addProductToLike, checkItemInLike } = useContext(likeContext);
-  const [checkInLike, setCheckInLike] = useState(checkItemInLike(item.id));
-  useEffect(() => {
-    setCheckInLike(checkItemInLike(item.id))
-  })
+  function increment(){
+    setCounter((prevState) => prevState + 1)
+}
   return (
     <Card className="ant-card-body_shop "
       hoverable
@@ -40,29 +42,37 @@ const ProductCard = ({ item }) => {
       style={{ width: "280px", margin: "10px", background: 'transparent' }}
       cover={<img alt="example" src={item.image1} style={{width: '250px', marginLeft: '5.5%'}} />}
       actions={[
-        <HeartFilled 
-        style={{ color: checkInLike ? "red" : "black", fontSize: "25px" }}
-          onClick={() => {
-            addProductToLike(item);
-            setCheckInLike(checkItemInLike(item.id));
-          }}/>,
-        <StarOutlined style={{ color: checkInFav ? "yellow" : "black", fontSize: "25px" }}
+        <div>
+        <HeartOutlined
+        style={{fontSize: "25px", color: 'red'}}
+        onClick={increment}
+        />
+        <h5>{counter}</h5>
+        </div>,
+        <div>
+        <StarOutlined style={{ color: checkInFav ? "orange" : "black", fontSize: "25px" }}
         onClick={() => {
           addProductToFav(item);
           setCheckInFav(checkItemInFav(item.id));
-        }} />,
+        }} />
+        <h5>Избранное</h5>
+        </div>,
+        <div>
         <ShoppingCartOutlined
           style={{ color: checkInCart ? "red" : "black", fontSize: "25px" }}
           onClick={() => {
             addProductToCart(item);
             setCheckInCart(checkItemInCart(item.id));
           }}
-        />,
+        />
+        <h5>Корзина</h5>
+        </div>,
         <Link to={`/window_shop/${item.id}`}>
-          <EllipsisOutlined
+          <SendOutlined
             style={{ color: "black", fontSize: "25px" }}
             key="ellipsis"
           />
+          <h5>Подробнее</h5>
         </Link>,
       ]}
     >
@@ -77,6 +87,7 @@ const ProductCard = ({ item }) => {
         }
       />
     </Card>
+    
   );
 };
 

@@ -20,8 +20,8 @@ const Login = () => {
     <>
       <section className="login">
         <div className="login-container">
-          <label className="auth-label">Email</label>
           <Input
+            placeholder='Email'
             className="auth-input"
             type="text"
             autoFocus
@@ -33,8 +33,8 @@ const Login = () => {
           />
           <p className="error-msg">{emailError}</p>
 
-          <label className="auth-label">Password</label>
           <Input
+            placeholder='Password'
             className="auth-input"
             type="password"
             autoFocus

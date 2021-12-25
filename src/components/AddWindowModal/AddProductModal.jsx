@@ -1,5 +1,5 @@
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Modal, Button, Form, Input, InputNumber } from "antd";
 
 import { productsContext } from "../../contexts/productsContext";
@@ -24,10 +24,10 @@ const AddProductModal = () => {
   return (
     <>
       <Button style={{marginLeft: '2%'}} type="primary" onClick={showModal}>
-        Add product
+        Add window
       </Button>
       <Modal
-        title="Add product"
+        title="Add window"
         visible={isModalVisible}
         onCancel={handleCancel}
         footer={null}
@@ -84,7 +84,7 @@ const AddProductModal = () => {
             }}
           >
             <Button type="primary" htmlType="submit">
-              Add product
+              Add window
             </Button>
           </Form.Item>
         </Form>
